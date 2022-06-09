@@ -34,8 +34,9 @@ int main(int argc, char **argv)
     value = 1;
     for (; value < argc; value++)
     {
+        filepath = argv[value];
         def_arg_txt.push_back(' ');
-        def_arg_txt += argv[value];
+        def_arg_txt += filepath.generic_string<char>();
     }
 
     printf("execute \"%s\"\n", def_arg_txt.c_str());
